@@ -57,13 +57,10 @@ export const createLaporan = async (req, user, file) => {
 };
 
 // UPDATE Laporan
+// UPDATE Laporan (tambahkan support remove_image)
 export const updateLaporan = async (id, user, reqBody, file) => {
   try {
-    console.log("Update - reqBody:", reqBody);
-    console.log("Update - file:", file);
-    
-    const { title, description, category_id } = reqBody;
-    // ... sisanya sama
+    const { title, description, category_id, remove_image } = reqBody;
     const userId = Number(user.id);
     const laporanId = Number(id);
     
@@ -96,9 +93,24 @@ export const updateLaporan = async (id, user, reqBody, file) => {
       updateFields.push("category_id = ?");
       updateValues.push(category_id);
     }
+    
+    // Handle image update
     if (file && file.filename) {
       updateFields.push("image = ?");
       updateValues.push(`/uploads/${file.filename}`);
+      
+      if (oldImage) {
+        const oldImagePath = path.join(uploadsDir, path.basename(oldImage));
+        if (fs.existsSync(oldImagePath)) {
+          fs.unlinkSync(oldImagePath);
+        }
+      }
+    }
+    
+    // ✅ Handle remove image
+    if (remove_image === "true" && !file) {
+      updateFields.push("image = ?");
+      updateValues.push(null);
       
       if (oldImage) {
         const oldImagePath = path.join(uploadsDir, path.basename(oldImage));
@@ -138,7 +150,7 @@ export const deleteLaporan = async (id, user) => {
     let query, params;
     
     if (role === 'admin' || role === 'super_admin') {
-      // Admin/super admin: cari dulu gambarnya sebelum hapus
+      
       const [laporan] = await db.query("SELECT image FROM laporan WHERE id = ?", [laporanId]);
       if (laporan.length > 0 && laporan[0].image) {
         const imagePath = path.join(uploadsDir, path.basename(laporan[0].image));
@@ -162,6 +174,25 @@ export const deleteLaporan = async (id, user) => {
     return { message: "Laporan berhasil dihapus ✅" };
   } catch (error) {
     return { error: error.message };
+  }
+};
+
+// GET ALL Laporan - PUBLIC (tanpa auth, untuk halaman utama)
+export const getPublicLaporan = async (req, res) => {
+  try {
+    const limit = req.query.limit || 5;
+    const [rows] = await db.query(
+      `SELECT l.*, u.username, c.name as category_name 
+       FROM laporan l
+       JOIN users u ON l.user_id = u.id
+       LEFT JOIN categories c ON l.category_id = c.id
+       ORDER BY l.created_at DESC
+       LIMIT ?`,
+      [parseInt(limit)]
+    );
+    res.json(rows);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 };
 

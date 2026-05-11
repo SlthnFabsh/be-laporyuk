@@ -34,20 +34,22 @@ export const login = async (req) => {
     );
 
     if (rows.length === 0) {
-      return { message: "User tidak ditemukan" };
+      // ✅ HARUS return status 401 dengan message
+      return { error: "Username tidak ditemukan", status: 401 };
     }
 
     const user = rows[0];
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
-      return { message: "Password salah" };
+      // ✅ HARUS return status 401 dengan message
+      return { error: "Password salah", status: 401 };
     }
 
     const token = jwt.sign(
       {
         id: user.id,
-        username: user.username, // ✅ tambahkan username
+        username: user.username,
         role: user.role,
       },
       process.env.JWT_SECRET || "supersecret",
@@ -64,6 +66,6 @@ export const login = async (req) => {
       }
     };
   } catch (error) {
-    return { error: error.message };
+    return { error: error.message, status: 500 };
   }
 };

@@ -7,6 +7,7 @@ import {
   updateLaporan,
   deleteLaporan,
   updateStatusLaporan,
+  getPublicLaporan, // ✅ import fungsi baru
 } from "../controllers/laporanController.js";
 import { verifyToken } from "../middleware/authMiddleware.js";
 import { uploadImage } from "../middleware/uploadMiddleware.js";
@@ -23,7 +24,10 @@ const authenticate = (req, res, next) => {
   next();
 };
 
-// ============ ROUTES ============
+// ✅ ROUTE PUBLIK - Letakkan di PALING ATAS (tanpa auth)
+router.get("/public", getPublicLaporan);
+
+// ============ DI BAWAH INI SEMUA ROUTE MEMERLUKAN AUTH ============
 
 // POST - Create Laporan
 router.post("/", authenticate, uploadImage, async (req, res) => {
@@ -37,14 +41,13 @@ router.get("/", authenticate, isAdmin, async (req, res) => {
   res.json(result);
 });
 
-// ✅ PENTING! Route /user/my HARUS sebelum /:id
-// GET - Laporan by User (Lihat laporan sendiri)
+// GET - Laporan by User
 router.get("/user/my", authenticate, async (req, res) => {
   const result = await getLaporanByUser(req.user);
   res.json(result);
 });
 
-// GET - Laporan by ID (Harus setelah route spesifik)
+// GET - Laporan by ID (dengan validasi pemilik)
 router.get("/:id", authenticate, async (req, res) => {
   const result = await getLaporanById(req.params.id, req.user);
   res.json(result);
