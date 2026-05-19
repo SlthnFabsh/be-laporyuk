@@ -13,16 +13,12 @@ export const createLaporan = async (req, user, file) => {
     // ✅ PERBAIKAN: Ambil dari berbagai kemungkinan sumber
     let title = req.body.title;
     let description = req.body.description;
+    let tanggal_kejadian = req.body.tanggal_kejadian;
+    let lokasi_kejadian = req.body.lokasi_kejadian;
+    let instansi_tujuan = req.body.instansi_tujuan;
     let category_id = req.body.category_id;
     
-    // Kalau masih undefined, coba dari req.body langsung
-    if (!title && req.body.title === undefined) {
-      title = req.body.title;
-    }
-    
-    console.log("Final title:", title);
-    console.log("Final description:", description);
-    console.log("Final category_id:", category_id);
+    console.log("Final data:", {title, description, tanggal_kejadian, lokasi_kejadian, instansi_tujuan, category_id});
     
     if (!title || !description) {
       if (file && file.path) {
@@ -37,9 +33,9 @@ export const createLaporan = async (req, user, file) => {
     }
 
     const [result] = await db.query(
-      `INSERT INTO laporan (user_id, title, description, category_id, status, image) 
-       VALUES (?, ?, ?, ?, 'pending', ?)`,
-      [user.id, title, description, category_id || null, imagePath]
+      `INSERT INTO laporan (user_id, title, description, tanggal_kejadian, lokasi_kejadian, instansi_tujuan, category_id, status, image) 
+       VALUES (?, ?, ?, ?, ?, ?, ?, 'pending', ?)`,
+      [user.id, title, description, tanggal_kejadian || null, lokasi_kejadian || null, instansi_tujuan || null, category_id || null, imagePath]
     );
 
     return { 
