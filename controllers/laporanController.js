@@ -182,7 +182,7 @@ export const getPublicLaporan = async (req, res) => {
   try {
     const limit = req.query.limit || 5;
     const [rows] = await db.query(
-      `SELECT l.*, u.username, c.name as category_name 
+      `SELECT l.*, u.nama_lengkap as username, c.name as category_name 
        FROM laporan l
        JOIN users u ON l.user_id = u.id
        LEFT JOIN categories c ON l.category_id = c.id
@@ -202,7 +202,7 @@ export const getPublicLaporan = async (req, res) => {
 export const getAllLaporan = async () => {
   try {
     const [rows] = await db.query(
-      `SELECT l.*, u.username, c.name as category_name 
+      `SELECT l.*, u.nama_lengkap as username, c.name as category_name 
        FROM laporan l
        JOIN users u ON l.user_id = u.id
        LEFT JOIN categories c ON l.category_id = c.id
@@ -218,7 +218,7 @@ export const getAllLaporan = async () => {
 export const getLaporanById = async (id, user) => {
   try {
     const [rows] = await db.query(
-      `SELECT l.*, u.username, c.name as category_name 
+      `SELECT l.*, u.nama_lengkap as username, c.name as category_name 
        FROM laporan l
        JOIN users u ON l.user_id = u.id
        LEFT JOIN categories c ON l.category_id = c.id
@@ -241,7 +241,7 @@ export const getLaporanById = async (id, user) => {
     
     // ✅ AMBIL KOMENTAR untuk laporan ini
     const [comments] = await db.query(
-      `SELECT c.*, u.username 
+      `SELECT c.*, u.nama_lengkap as username 
        FROM comments c
        JOIN users u ON c.user_id = u.id
        WHERE c.laporan_id = ?

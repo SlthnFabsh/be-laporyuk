@@ -4,17 +4,56 @@ import db from "../config/database.js";
 
 export const register = async (req) => {
   try {
-    const { username, password } = req.body;
+    const { nik, nama_lengkap, email, password, alamat } = req.body;
 
-    if (!username || !password) {
-      return { message: "Username & password wajib diisi" };
+    // Validasi field wajib
+    if (!nik || !nama_lengkap || !email || !password || !alamat) {
+      return { 
+        message: "NIK, nama lengkap, email, password, dan alamat wajib diisi" 
+      };
+    }
+
+    // Validasi NIK (16 digit)
+    if (!/^\d{16}$/.test(nik)) {
+      return { message: "NIK harus 16 digit angka" };
+    }
+
+    // Validasi email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return { message: "Format email tidak valid" };
+    }
+
+    // Validasi password minimal 6 karakter
+    if (password.length < 6) {
+      return { message: "Password minimal 6 karakter" };
+    }
+
+    // Cek apakah NIK sudah terdaftar
+    const [existingNIK] = await db.query(
+      "SELECT id FROM users WHERE nik = ?",
+      [nik]
+    );
+    
+    if (existingNIK.length > 0) {
+      return { message: "NIK sudah terdaftar" };
+    }
+
+    // Cek apakah email sudah terdaftar
+    const [existingEmail] = await db.query(
+      "SELECT id FROM users WHERE email = ?",
+      [email]
+    );
+    
+    if (existingEmail.length > 0) {
+      return { message: "Email sudah terdaftar" };
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
     await db.query(
-      "INSERT INTO users (username, password) VALUES (?, ?)",
-      [username, hashedPassword]
+      "INSERT INTO users (nik, nama_lengkap, email, password, alamat) VALUES (?, ?, ?, ?, ?)",
+      [nik, nama_lengkap, email, hashedPassword, alamat]
     );
 
     return { message: "Register berhasil ✅" };
@@ -26,30 +65,35 @@ export const register = async (req) => {
 // LOGIN
 export const login = async (req) => {
   try {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
+
+    // Validasi field wajib
+    if (!email || !password) {
+      return { error: "Email & password wajib diisi", status: 400 };
+    }
 
     const [rows] = await db.query(
-      "SELECT * FROM users WHERE username = ?",
-      [username]
+      "SELECT * FROM users WHERE email = ?",
+      [email]
     );
 
     if (rows.length === 0) {
-      // ✅ HARUS return status 401 dengan message
-      return { error: "Username tidak ditemukan", status: 401 };
+      return { error: "Email tidak ditemukan", status: 401 };
     }
 
     const user = rows[0];
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
-      // ✅ HARUS return status 401 dengan message
       return { error: "Password salah", status: 401 };
     }
 
     const token = jwt.sign(
       {
         id: user.id,
-        username: user.username,
+        nik: user.nik,
+        nama_lengkap: user.nama_lengkap,
+        email: user.email,
         role: user.role,
       },
       process.env.JWT_SECRET || "supersecret",
@@ -61,7 +105,10 @@ export const login = async (req) => {
       token,
       user: {
         id: user.id,
-        username: user.username,
+        nik: user.nik,
+        nama_lengkap: user.nama_lengkap,
+        email: user.email,
+        alamat: user.alamat,
         role: user.role
       }
     };
