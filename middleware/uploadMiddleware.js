@@ -27,7 +27,7 @@ export const uploadImage = (req, res, next) => {
   // Simpan body asli sebelum multer
   const originalBody = { ...req.body };
   
-  upload.single("image")(req, res, (err) => {
+  upload.array("images", 10)(req, res, (err) => {
     if (err) {
       console.log("Multer error:", err);
       return res.status(400).json({ error: err.message });

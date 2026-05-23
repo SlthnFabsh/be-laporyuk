@@ -7,7 +7,8 @@ import {
   updateLaporan,
   deleteLaporan,
   updateStatusLaporan,
-  getPublicLaporan, // ✅ import fungsi baru
+  rejectLaporanWithReason, // ✅ import fungsi baru untuk reject dengan alasan
+  getPublicLaporan,
 } from "../controllers/laporanController.js";
 import { verifyToken } from "../middleware/authMiddleware.js";
 import { uploadImage } from "../middleware/uploadMiddleware.js";
@@ -31,7 +32,7 @@ router.get("/public", getPublicLaporan);
 
 // POST - Create Laporan
 router.post("/", authenticate, uploadImage, async (req, res) => {
-  const result = await createLaporan(req, req.user, req.file);
+  const result = await createLaporan(req, req.user, req.files);
   res.json(result);
 });
 
@@ -55,7 +56,7 @@ router.get("/:id", authenticate, async (req, res) => {
 
 // PUT - Update Laporan
 router.put("/:id", authenticate, uploadImage, async (req, res) => {
-  const result = await updateLaporan(req.params.id, req.user, req.body, req.file);
+  const result = await updateLaporan(req.params.id, req.user, req.body, req.files);
   res.json(result);
 });
 
@@ -69,6 +70,13 @@ router.delete("/:id", authenticate, async (req, res) => {
 router.patch("/:id/status", authenticate, isAdmin, async (req, res) => {
   const { status } = req.body;
   const result = await updateStatusLaporan(req.params.id, req.user, status);
+  res.json(result);
+});
+
+// ✅ ROUTE BARU: Reject Laporan dengan Alasan (Admin only)
+router.patch("/:id/reject", authenticate, isAdmin, async (req, res) => {
+  const { rejection_reason } = req.body;
+  const result = await rejectLaporanWithReason(req.params.id, req.user, rejection_reason);
   res.json(result);
 });
 

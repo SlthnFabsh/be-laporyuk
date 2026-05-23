@@ -7,7 +7,8 @@ import authRoutes from "./routes/authRoutes.js";
 import laporanRoutes from "./routes/laporanRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import commentRoutes from "./routes/commentRoutes.js";
-import categoryRoutes from "./routes/categoryRoutes.js"; 
+import categoryRoutes from "./routes/categoryRoutes.js";
+import institutionRoutes from "./routes/institutionRoutes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -35,7 +36,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/laporan", laporanRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/comments", commentRoutes);
-app.use("/api/categories", categoryRoutes);    
+app.use("/api/categories", categoryRoutes);
+app.use("/api/institutions", institutionRoutes);
 
 // 5. Error handler
 app.use((err, req, res, next) => {
