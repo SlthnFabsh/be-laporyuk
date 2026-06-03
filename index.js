@@ -16,10 +16,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors({
-  origin: ["http://localhost:3001"], // Frontend di port 3001
-  credentials: true,
-}));
+app.use(cors());
 
 // ✅ URUTAN PENTING - JANGAN UBAH!
 // 1. Parse URL encoded (untuk form-data biasa)

@@ -9,24 +9,24 @@ export const register = async (req) => {
     // Validasi field wajib
     if (!nik || !nama_lengkap || !email || !password || !alamat) {
       return { 
-        message: "NIK, nama lengkap, email, password, dan alamat wajib diisi" 
+        error: "NIK, nama lengkap, email, password, dan alamat wajib diisi" 
       };
     }
 
     // Validasi NIK (16 digit)
     if (!/^\d{16}$/.test(nik)) {
-      return { message: "NIK harus 16 digit angka" };
+      return { error: "NIK harus 16 digit angka" };
     }
 
     // Validasi email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      return { message: "Format email tidak valid" };
+      return { error: "Format email tidak valid" };
     }
 
     // Validasi password minimal 6 karakter
     if (password.length < 6) {
-      return { message: "Password minimal 6 karakter" };
+      return { error: "Password minimal 6 karakter" };
     }
 
     // Cek apakah NIK sudah terdaftar
@@ -36,7 +36,7 @@ export const register = async (req) => {
     );
     
     if (existingNIK.length > 0) {
-      return { message: "NIK sudah terdaftar" };
+      return { error: "NIK sudah terdaftar" };
     }
 
     // Cek apakah email sudah terdaftar
@@ -46,7 +46,7 @@ export const register = async (req) => {
     );
     
     if (existingEmail.length > 0) {
-      return { message: "Email sudah terdaftar" };
+      return { error: "Email sudah terdaftar" };
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
