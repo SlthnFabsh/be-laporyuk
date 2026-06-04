@@ -9,6 +9,7 @@ const uploadsDir = path.join(__dirname, "../uploads");
 
 // ============ CREATE Laporan dengan gambar ============
 export const createLaporan = async (req, user, files) => {
+  const logFile = path.join(uploadsDir, "../debug_laporan_create.log");
   try {
     // ✅ PERBAIKAN: Ambil dari berbagai kemungkinan sumber
     let title = req.body.title;
@@ -18,7 +19,9 @@ export const createLaporan = async (req, user, files) => {
     let instansi_tujuan = req.body.instansi_tujuan;
     let category_id = req.body.category_id;
     
-    console.log("Final data:", {title, description, tanggal_kejadian, lokasi_kejadian, instansi_tujuan, category_id});
+    fs.appendFileSync(logFile, `\n\n--- [${new Date().toISOString()}] createLaporan Executing ---\n`);
+    fs.appendFileSync(logFile, `User: ${JSON.stringify(user, null, 2)}\n`);
+    fs.appendFileSync(logFile, `Fields: ${JSON.stringify({title, description, tanggal_kejadian, lokasi_kejadian, instansi_tujuan, category_id}, null, 2)}\n`);
     
     if (!title || !description) {
       if (files && files.length > 0) {
@@ -26,6 +29,7 @@ export const createLaporan = async (req, user, files) => {
           if (file.path) fs.unlinkSync(file.path);
         });
       }
+      fs.appendFileSync(logFile, `Result: Validation Error (Missing title/description)\n`);
       return { error: "Title dan description wajib diisi ❌" };
     }
 
@@ -47,14 +51,17 @@ export const createLaporan = async (req, user, files) => {
       [user.id, title, description, tanggal_kejadian || null, lokasi_kejadian || null, instansi_tujuan || null, category_id || null, primaryImage, imagesJson]
     );
 
-    return { 
+    const successRes = { 
       message: "Laporan berhasil dibuat ✅",
       id: result.insertId,
       image: primaryImage,
       images: imagePaths
     };
+    fs.appendFileSync(logFile, `Result: Success! Inserted ID: ${result.insertId}\n`);
+    return successRes;
   } catch (error) {
     console.log("Error createLaporan:", error);
+    fs.appendFileSync(logFile, `Result: Database Error: ${error.message}\nStack: ${error.stack}\n`);
     if (files && files.length > 0) {
       files.forEach(file => {
         if (file.path) fs.unlinkSync(file.path);

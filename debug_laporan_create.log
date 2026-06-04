@@ -1,0 +1,200 @@
+
+
+--- [2026-06-03T13:52:47.658Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "COBA AJA",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780458865,
+  "exp": 1780545265
+}
+Fields: {
+  "title": "Test Laporan Biasa",
+  "description": "Deskripsi laporan biasa panjang minimal sepuluh karakter",
+  "tanggal_kejadian": "2026-06-03",
+  "lokasi_kejadian": "Jalan Raya",
+  "instansi_tujuan": "3",
+  "category_id": "6"
+}
+Result: Success! Inserted ID: 45
+
+
+--- [2026-06-03T13:53:14.673Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "COBA AJA",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780458865,
+  "exp": 1780545265
+}
+Fields: {
+  "title": "Test Laporan Biasa",
+  "description": "Deskripsi laporan biasa panjang minimal sepuluh karakter",
+  "tanggal_kejadian": "212121",
+  "lokasi_kejadian": "Jalan Raya",
+  "instansi_tujuan": "3",
+  "category_id": "6"
+}
+Result: Database Error: Incorrect date value: '212121' for column 'tanggal_kejadian' at row 1
+Stack: Error: Incorrect date value: '212121' for column 'tanggal_kejadian' at row 1
+    at createLaporan (file:///C:/laragon/www/projek-aas/be-laporyuk/controllers/laporanController.js:48:31)
+    at file:///C:/laragon/www/projek-aas/be-laporyuk/routes/laporanRoutes.js:35:24
+    at Layer.handleRequest (C:\laragon\www\projek-aas\be-laporyuk\node_modules\router\lib\layer.js:152:17)
+    at next (C:\laragon\www\projek-aas\be-laporyuk\node_modules\router\lib\route.js:157:13)
+    at file:///C:/laragon/www/projek-aas/be-laporyuk/middleware/uploadMiddleware.js:44:5
+    at done (C:\laragon\www\projek-aas\be-laporyuk\node_modules\multer\lib\make-middleware.js:69:7)
+    at indicateDone (C:\laragon\www\projek-aas\be-laporyuk\node_modules\multer\lib\make-middleware.js:73:68)
+    at Multipart.<anonymous> (C:\laragon\www\projek-aas\be-laporyuk\node_modules\multer\lib\make-middleware.js:243:7)
+    at Multipart.emit (node:events:518:28)
+    at emitCloseNT (node:internal/streams/destroy:148:10)
+
+
+--- [2026-06-03T13:55:29.295Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "COBA AJA",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780458865,
+  "exp": 1780545265
+}
+Fields: {
+  "title": "sagrgrgargrgragrsgsgrg",
+  "description": "rgadggraegaregregergg",
+  "tanggal_kejadian": "2026-06-03",
+  "lokasi_kejadian": "sfsasgsaggaegrgr",
+  "instansi_tujuan": "3",
+  "category_id": "6"
+}
+Result: Success! Inserted ID: 46
+
+
+--- [2026-06-04T07:04:16.061Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "COBA AJA",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780556620,
+  "exp": 1780643020
+}
+Fields: {
+  "title": "coba dulu",
+  "description": "coba dulucoba dulucoba dulu",
+  "tanggal_kejadian": "2022-06-03",
+  "lokasi_kejadian": "coba",
+  "instansi_tujuan": "5",
+  "category_id": "1"
+}
+Result: Success! Inserted ID: 47
+
+
+--- [2026-06-04T07:04:47.266Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "COBA AJA",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780556620,
+  "exp": 1780643020
+}
+Fields: {
+  "title": "coba dulu",
+  "description": "coba dulucoba dulucoba dulu",
+  "tanggal_kejadian": "2022-08-10",
+  "lokasi_kejadian": "coba dulucoba dulucoba dulu",
+  "instansi_tujuan": "3",
+  "category_id": "3"
+}
+Result: Success! Inserted ID: 48
+
+
+--- [2026-06-04T07:07:40.652Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "COBA AJA",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780556620,
+  "exp": 1780643020
+}
+Fields: {
+  "title": "asdasd",
+  "description": "asdasd",
+  "tanggal_kejadian": "2002-02-22",
+  "lokasi_kejadian": "asdasd",
+  "instansi_tujuan": "2",
+  "category_id": "4"
+}
+Result: Success! Inserted ID: 49
+
+
+--- [2026-06-04T07:23:22.031Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "COBA AJA",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780556620,
+  "exp": 1780643020
+}
+Fields: {
+  "title": "rapi jelek",
+  "description": "rapi jelekrapi jelekrapi jelekrapi jelek",
+  "tanggal_kejadian": "2022-01-20",
+  "lokasi_kejadian": "cobabaocbaoboaboaboabda",
+  "instansi_tujuan": "5",
+  "category_id": "3"
+}
+Result: Success! Inserted ID: 50
+
+
+--- [2026-06-04T07:31:08.953Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "COBA AJA",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780556620,
+  "exp": 1780643020
+}
+Fields: {
+  "title": "sadasd",
+  "description": "asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd",
+  "tanggal_kejadian": "2002-02-12",
+  "lokasi_kejadian": "asdasd",
+  "instansi_tujuan": "5",
+  "category_id": "4"
+}
+Result: Success! Inserted ID: 51
+
+
+--- [2026-06-04T07:33:20.690Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "COBA AJA",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780556620,
+  "exp": 1780643020
+}
+Fields: {
+  "title": "asdasdasd",
+  "description": "asdasdasdasdasdasd",
+  "tanggal_kejadian": "2002-02-22",
+  "lokasi_kejadian": "asd",
+  "instansi_tujuan": "2",
+  "category_id": "4"
+}
+Result: Success! Inserted ID: 52

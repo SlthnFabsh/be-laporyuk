@@ -16,21 +16,38 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allow semua origin (mobile, web, dev)
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: [
+    'Content-Type',
+    'Authorization',
+    'Accept',
+    'Origin',
+    'X-Requested-With',
+  ],
+  exposedHeaders: ['Content-Length', 'Content-Type'],
+  credentials: false,
+}));
 
-// ✅ URUTAN PENTING - JANGAN UBAH!
-// 1. Parse URL encoded (untuk form-data biasa)
-app.use(express.urlencoded({ extended: true }));
 
-// 2. Parse JSON (untuk raw JSON)
-app.use(express.json());
+// ✅ PENTING: laporanRoutes HARUS didaftarkan SEBELUM express.json() dan express.urlencoded()
+// Karena multer (di dalam laporanRoutes) yang akan handle stream multipart/form-data.
+// Jika express.json() dipasang dulu secara global, stream request akan di-consume/tainted
+// sebelum multer sempat membacanya → file tidak ter-upload, req.files kosong.
 
-// 3. Static files
+// 1. Static files (tidak perlu stream parsing)
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// 4. Routes
-app.use("/api/auth", authRoutes);
+// 2. ✅ Laporan routes DULUAN — multer akan handle multipart parsing sendiri
 app.use("/api/laporan", laporanRoutes);
+
+// 3. Setelah laporan, baru pasang body parsers untuk routes lain
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// 4. Routes lainnya (tidak ada multer, aman pakai JSON/urlencoded)
+app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/categories", categoryRoutes);

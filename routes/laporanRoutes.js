@@ -32,7 +32,12 @@ router.get("/public", getPublicLaporan);
 
 // POST - Create Laporan
 router.post("/", authenticate, uploadImage, async (req, res) => {
+  console.log(req.body);
+  console.log(req.files);
   const result = await createLaporan(req, req.user, req.files);
+  if (result.error) {
+    return res.status(400).json(result);
+  }
   res.json(result);
 });
 
@@ -57,6 +62,9 @@ router.get("/:id", authenticate, async (req, res) => {
 // PUT - Update Laporan
 router.put("/:id", authenticate, uploadImage, async (req, res) => {
   const result = await updateLaporan(req.params.id, req.user, req.body, req.files);
+  if (result.error) {
+    return res.status(400).json(result);
+  }
   res.json(result);
 });
 

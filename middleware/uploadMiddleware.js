@@ -19,38 +19,28 @@ const storage = multer.diskStorage({
 
 const upload = multer({ 
   storage: storage,
-  limits: { fileSize: 2 * 1024 * 1024 }
+  limits: { fileSize: 5 * 1024 * 1024 } // 5MB
 });
 
-// ✅ PERBAIKAN UTAMA
+// ✅ Wrapper untuk handle multipart/form-data dengan proper error handling
 export const uploadImage = (req, res, next) => {
-  // Simpan body asli sebelum multer
-  const originalBody = { ...req.body };
-  
-  upload.array("images", 10)(req, res, (err) => {
-    if (err) {
+  const logFile = path.join(uploadDir, "../debug_upload.log");
+  fs.appendFileSync(logFile, `\n\n--- [${new Date().toISOString()}] Incoming Request ---\n`);
+  fs.appendFileSync(logFile, `Headers: ${JSON.stringify(req.headers, null, 2)}\n`);
+
+  upload.array("files", 10)(req, res, (err) => {
+    if (err instanceof multer.MulterError) {
       console.log("Multer error:", err);
+      fs.appendFileSync(logFile, `Multer Error: ${err.message}\n`);
+      return res.status(400).json({ error: err.message });
+    } else if (err) {
+      console.log("Upload error:", err);
+      fs.appendFileSync(logFile, `Upload Error: ${err.message}\n`);
       return res.status(400).json({ error: err.message });
     }
     
-    // ✅ Gabungkan body dari multer dengan body asli
-    if (req.body && typeof req.body === 'object') {
-      Object.assign(req.body, originalBody);
-    }
-    
-    // ✅ Pastikan field text terbaca dengan benar
-    if (req.body.title === undefined && originalBody.title) {
-      req.body.title = originalBody.title;
-    }
-    if (req.body.description === undefined && originalBody.description) {
-      req.body.description = originalBody.description;
-    }
-    if (req.body.category_id === undefined && originalBody.category_id) {
-      req.body.category_id = originalBody.category_id;
-    }
-    
-    console.log("After multer - req.body:", req.body);
-    
+    fs.appendFileSync(logFile, `Files received: ${JSON.stringify(req.files || [], null, 2)}\n`);
+    fs.appendFileSync(logFile, `Body received: ${JSON.stringify(req.body || {}, null, 2)}\n`);
     next();
   });
 };
