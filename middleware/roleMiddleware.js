@@ -44,3 +44,23 @@ export const isOwnerOrAdmin = (req, res, next) => {
   
   return res.status(403).json({ error: "Akses ditolak - Bukan pemilik resource" });
 };
+
+export const isOwnerOrSuperAdmin = (req, res, next) => {
+  const currentUserId = req.user?.id;
+  const currentUserRole = req.user?.role;
+  const targetUserId = parseInt(req.params.id);
+
+  if (!currentUserId) {
+    return res.status(401).json({ error: "Unauthorized - Login dulu" });
+  }
+
+  if (currentUserRole === 'super_admin') {
+    return next();
+  }
+
+  if (currentUserId === targetUserId) {
+    return next();
+  }
+
+  return res.status(403).json({ error: "Akses ditolak - Hanya pemilik akun atau super admin" });
+};

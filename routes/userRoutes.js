@@ -7,7 +7,7 @@ import {
   deleteUser,
 } from "../controllers/userController.js";
 import { verifyToken } from "../middleware/authMiddleware.js";
-import { isSuperAdmin } from "../middleware/roleMiddleware.js"; // ✅ Hanya import yang ada
+import { isSuperAdmin, isOwnerOrSuperAdmin } from "../middleware/roleMiddleware.js"; // ✅ Hanya import yang ada
 
 const router = express.Router();
 
@@ -27,8 +27,8 @@ router.get("/", authenticate, isSuperAdmin, async (req, res) => {
   res.json(result);
 });
 
-// GET - User by ID (Super Admin only)
-router.get("/:id", authenticate, isSuperAdmin, async (req, res) => {
+// GET - User by ID (Super Admin or Account Owner)
+router.get("/:id", authenticate, isOwnerOrSuperAdmin, async (req, res) => {
   const result = await getUserById(req.params.id);
   res.json(result);
 });
@@ -39,8 +39,8 @@ router.post("/", authenticate, isSuperAdmin, async (req, res) => {
   res.json(result);
 });
 
-// PUT - Update user (Super Admin only)
-router.put("/:id", authenticate, isSuperAdmin, async (req, res) => {
+// PUT - Update user (Super Admin or Account Owner)
+router.put("/:id", authenticate, isOwnerOrSuperAdmin, async (req, res) => {
   const result = await updateUser(req.params.id, req.body, req.user);
   res.json(result);
 });
