@@ -7,7 +7,7 @@ import {
   updateLaporan,
   deleteLaporan,
   updateStatusLaporan,
-  rejectLaporanWithReason, // ✅ import fungsi baru untuk reject dengan alasan
+  rejectLaporanWithReason,
   getPublicLaporan,
 } from "../controllers/laporanController.js";
 import { verifyToken } from "../middleware/authMiddleware.js";
@@ -27,8 +27,6 @@ const authenticate = (req, res, next) => {
 
 // ✅ ROUTE PUBLIK - Letakkan di PALING ATAS (tanpa auth)
 router.get("/public", getPublicLaporan);
-
-// ============ DI BAWAH INI SEMUA ROUTE MEMERLUKAN AUTH ============
 
 // POST - Create Laporan
 router.post("/", authenticate, uploadImage, async (req, res) => {
@@ -75,14 +73,14 @@ router.delete("/:id", authenticate, async (req, res) => {
 });
 
 // PATCH - Update Status (Admin only)
-router.patch("/:id/status", authenticate, isAdmin, async (req, res) => {
+router.patch("/:id/status", authenticate, isAdmin, express.json(), async (req, res) => {
   const { status } = req.body;
   const result = await updateStatusLaporan(req.params.id, req.user, status);
   res.json(result);
 });
 
-// ✅ ROUTE BARU: Reject Laporan dengan Alasan (Admin only)
-router.patch("/:id/reject", authenticate, isAdmin, async (req, res) => {
+//  ROUTE BARU: Reject Laporan dengan Alasan (Admin only)
+router.patch("/:id/reject", authenticate, isAdmin, express.json(), async (req, res) => {
   const { rejection_reason } = req.body;
   const result = await rejectLaporanWithReason(req.params.id, req.user, rejection_reason);
   res.json(result);

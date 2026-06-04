@@ -22,7 +22,7 @@ const upload = multer({
   limits: { fileSize: 5 * 1024 * 1024 } // 5MB
 });
 
-// ✅ Wrapper untuk handle multipart/form-data dengan proper error handling
+//  Wrapper untuk handle multipart/form-data dengan proper error handling
 export const uploadImage = (req, res, next) => {
   const logFile = path.join(uploadDir, "../debug_upload.log");
   fs.appendFileSync(logFile, `\n\n--- [${new Date().toISOString()}] Incoming Request ---\n`);

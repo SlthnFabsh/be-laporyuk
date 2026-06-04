@@ -7,11 +7,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const uploadsDir = path.join(__dirname, "../uploads");
 
-// ============ CREATE Laporan dengan gambar ============
+
 export const createLaporan = async (req, user, files) => {
   const logFile = path.join(uploadsDir, "../debug_laporan_create.log");
   try {
-    // ✅ PERBAIKAN: Ambil dari berbagai kemungkinan sumber
     let title = req.body.title;
     let description = req.body.description;
     let tanggal_kejadian = req.body.tanggal_kejadian;
@@ -71,7 +70,6 @@ export const createLaporan = async (req, user, files) => {
   }
 };
 
-// UPDATE Laporan (tambahkan support multiple images)
 export const updateLaporan = async (id, user, reqBody, files) => {
   try {
     const { title, description, category_id } = reqBody;
@@ -91,7 +89,6 @@ export const updateLaporan = async (id, user, reqBody, files) => {
       return { message: "Laporan tidak ditemukan / bukan milik user ❌" };
     }
     
-    // Parse existing images
     let oldImages = [];
     if (check[0].images) {
       try {
@@ -101,7 +98,6 @@ export const updateLaporan = async (id, user, reqBody, files) => {
       oldImages = [check[0].image];
     }
     
-    // Parse remaining images sent by client
     let imagesToKeep = [];
     if (existing_images) {
       try {
@@ -111,7 +107,6 @@ export const updateLaporan = async (id, user, reqBody, files) => {
       }
     }
     
-    // Delete files that were removed by user
     for (const oldImg of oldImages) {
       if (!imagesToKeep.includes(oldImg)) {
         const oldImagePath = path.join(uploadsDir, path.basename(oldImg));
@@ -121,7 +116,6 @@ export const updateLaporan = async (id, user, reqBody, files) => {
       }
     }
     
-    // Process new uploaded images
     const newImagePaths = [];
     if (files && files.length > 0) {
       files.forEach(file => {
@@ -131,7 +125,6 @@ export const updateLaporan = async (id, user, reqBody, files) => {
       });
     }
     
-    // Combine remaining and new images
     const finalImages = [...imagesToKeep, ...newImagePaths];
     const primaryImage = finalImages[0] || null;
     const imagesJson = finalImages.length > 0 ? JSON.stringify(finalImages) : null;
@@ -156,7 +149,6 @@ export const updateLaporan = async (id, user, reqBody, files) => {
       updateValues.push(category_id);
     }
     
-    // Selalu update field gambar
     updateFields.push("image = ?");
     updateValues.push(primaryImage);
     updateFields.push("images = ?");
@@ -189,8 +181,6 @@ export const updateLaporan = async (id, user, reqBody, files) => {
   }
 };
 
-// ... fungsi lainnya (getAllLaporan, getLaporanById, dll) tetap sama seperti sebelumnya
-// ============ DELETE Laporan (hapus semua file gambarnya) ============
 export const deleteLaporan = async (id, user) => {
   try {
     const userId = Number(user.id);
@@ -209,7 +199,6 @@ export const deleteLaporan = async (id, user) => {
       return { message: "Data tidak ditemukan / bukan milik user ❌" };
     }
 
-    // Hapus semua file gambar yang terasosiasi
     let images = [];
     if (laporan[0].images) {
       try {
@@ -249,7 +238,6 @@ export const deleteLaporan = async (id, user) => {
   }
 };
 
-// GET ALL Laporan - PUBLIC (tanpa auth, untuk halaman utama)
 export const getPublicLaporan = async (req, res) => {
   try {
     const limit = req.query.limit || 5;
@@ -277,9 +265,6 @@ export const getPublicLaporan = async (req, res) => {
   }
 };
 
-// ============ Fungsi lain tetap sama ============
-// getAllLaporan, getLaporanById, getLaporanByUser, updateStatusLaporan
-// (copy dari kode sebelumnya, tidak perlu diubah)
 export const getAllLaporan = async () => {
   try {
     const [rows] = await db.query(
@@ -303,7 +288,6 @@ export const getAllLaporan = async () => {
   }
 };
 
-// GET Laporan by ID (dengan validasi: user biasa hanya bisa lihat milik sendiri)
 export const getLaporanById = async (id, user) => {
   try {
     const [rows] = await db.query(
@@ -336,7 +320,6 @@ export const getLaporanById = async (id, user) => {
     }
     laporan.images = imgs;
     
-    // ✅ AMBIL KOMENTAR untuk laporan ini
     const [comments] = await db.query(
       `SELECT c.*, u.nama_lengkap as username 
        FROM comments c
@@ -420,7 +403,6 @@ export const updateStatusLaporan = async (id, user, status, rejectionReason = nu
   }
 };
 
-// ============ FUNGSI BARU: Reject Laporan dengan Alasan ============
 export const rejectLaporanWithReason = async (id, user, rejectionReason) => {
   try {
     const role = user.role;

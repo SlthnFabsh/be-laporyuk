@@ -16,7 +16,7 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   const result = await login(req);
   
-  // ✅ Handle error dengan status code yang benar
+  //  Handle error dengan status code yang benar
   if (result.error) {
     const statusCode = result.status || 401;
     return res.status(statusCode).json({ message: result.error });

@@ -20,7 +20,6 @@ const authenticate = (req, res, next) => {
   next();
 };
 
-// ============ ROUTES ============
 
 // GET - All users (Super Admin only)
 router.get("/", authenticate, isSuperAdmin, async (req, res) => {

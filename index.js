@@ -31,15 +31,12 @@ app.use(cors({
 }));
 
 
-// ✅ PENTING: laporanRoutes HARUS didaftarkan SEBELUM express.json() dan express.urlencoded()
-// Karena multer (di dalam laporanRoutes) yang akan handle stream multipart/form-data.
-// Jika express.json() dipasang dulu secara global, stream request akan di-consume/tainted
-// sebelum multer sempat membacanya → file tidak ter-upload, req.files kosong.
+
 
 // 1. Static files (tidak perlu stream parsing)
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// 2. ✅ Laporan routes DULUAN — multer akan handle multipart parsing sendiri
+// 2.  Laporan routes DULUAN — multer akan handle multipart parsing sendiri
 app.use("/api/laporan", laporanRoutes);
 
 // 3. Setelah laporan, baru pasang body parsers untuk routes lain

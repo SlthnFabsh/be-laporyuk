@@ -1,6 +1,3 @@
-// middleware/roleMiddleware.js
-
-// Cek apakah user adalah admin atau super_admin
 export const isAdmin = (req, res, next) => {
   const role = req.user?.role;
   
@@ -30,7 +27,6 @@ export const isSuperAdmin = (req, res, next) => {
   next();
 };
 
-// ✅ TAMBAHKAN INI - untuk cek apakah user pemilik resource atau admin
 export const isOwnerOrAdmin = (req, res, next) => {
   const userId = req.user?.id;
   const role = req.user?.role;

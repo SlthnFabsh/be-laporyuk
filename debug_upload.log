@@ -1,332 +1,99 @@
 
 
---- [2026-06-03T13:49:22.633Z] Incoming Request ---
-Headers: {
-  "host": "192.168.123.54:3000",
-  "connection": "keep-alive",
-  "content-length": "849",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryAsyDBcPOaTx3gzEp",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNDU4ODY1LCJleHAiOjE3ODA1NDUyNjV9.TI8cc4Q9Yc6La501ZZgczie5-BxvodqVsXnjZKE1Ts8",
-  "accept": "*/*",
-  "origin": "http://localhost:8081",
-  "referer": "http://localhost:8081/",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-}
-Files received: []
-Body received: {
-  "title": "adaghvfvuaefvyoaveufvaevgfogaef",
-  "description": "afoyugafeuovfhufbuafosfgvevfuslf",
-  "tanggal_kejadian": "212121212",
-  "lokasi_kejadian": "aflhbeflhbfiBFYUEFYIewbfiehbf",
-  "instansi_tujuan": "3",
-  "category_id": "6",
-  "files": "[object Object]"
-}
-
-
---- [2026-06-03T13:50:02.193Z] Incoming Request ---
-Headers: {
-  "host": "192.168.123.54:3000",
-  "connection": "keep-alive",
-  "content-length": "685",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryqntRpfHt1TnwIJgu",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNDU4ODY1LCJleHAiOjE3ODA1NDUyNjV9.TI8cc4Q9Yc6La501ZZgczie5-BxvodqVsXnjZKE1Ts8",
-  "accept": "*/*",
-  "origin": "http://localhost:8081",
-  "referer": "http://localhost:8081/",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-}
-Files received: []
-Body received: {
-  "title": "dxgchjbkjlfxfsfhjhbuicfx",
-  "description": "asdfghjkl;",
-  "tanggal_kejadian": "4567",
-  "lokasi_kejadian": "zvbnm,",
-  "instansi_tujuan": "3",
-  "category_id": "6"
-}
-
-
---- [2026-06-03T13:50:23.894Z] Incoming Request ---
-Headers: {
-  "host": "192.168.123.54:3000",
-  "connection": "keep-alive",
-  "content-length": "906",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryvDESDYoHYMbCGZ3j",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNDU4ODY1LCJleHAiOjE3ODA1NDUyNjV9.TI8cc4Q9Yc6La501ZZgczie5-BxvodqVsXnjZKE1Ts8",
-  "accept": "*/*",
-  "origin": "http://localhost:8081",
-  "referer": "http://localhost:8081/",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-}
-Files received: []
-Body received: {
-  "title": "fghiugfioiufuoigfguiiuygfuioihgfgiugf",
-  "description": "fghiugfioiufuoigfguiiuygfuioihgfgiugffghiugfioiufuoigfguiiuygfuioihgfgiugffghiugfioiufuoigfguiiuygfuioihgfgiugffghiugfioiufuoigfguiiuygfuioihgfgiugf",
-  "tanggal_kejadian": "212121",
-  "lokasi_kejadian": "fghiugfioiufuoigfguiiuygfuioihgfgiugffghiugfioiufuoigfguiiuygfuioihgfgiugf",
-  "instansi_tujuan": "5",
-  "category_id": "7"
-}
-
-
---- [2026-06-03T13:52:47.627Z] Incoming Request ---
+--- [2026-06-04T08:25:30.515Z] Incoming Request ---
 Headers: {
   "host": "localhost:3000",
   "connection": "keep-alive",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNDU4ODY1LCJleHAiOjE3ODA1NDUyNjV9.TI8cc4Q9Yc6La501ZZgczie5-BxvodqVsXnjZKE1Ts8",
-  "content-type": "multipart/form-data; boundary=----formdata-undici-002318565669",
-  "accept": "*/*",
-  "accept-language": "*",
+  "content-length": "579",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmlrIjoiMTk5OTk5MTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6ImNvYmFtb2JpbGUiLCJlbWFpbCI6ImNvYmFtb2JpbGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3ODA1NjA5MzYsImV4cCI6MTc4MDY0NzMzNn0.QsKlzYeTb0bx4pA-kEjwMC4lygQb2J8ZL-DUS33LJFU",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+  "accept": "application/json, text/plain, */*",
+  "sec-ch-ua": "\"Chromium\";v=\"148\", \"Microsoft Edge\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryuTcZQ1ZyfdB2KsAw",
+  "sec-ch-ua-mobile": "?0",
+  "origin": "http://localhost:3001",
+  "sec-fetch-site": "same-site",
   "sec-fetch-mode": "cors",
-  "user-agent": "node",
-  "accept-encoding": "gzip, deflate",
-  "content-length": "691"
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:3001/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "id,en;q=0.9,en-GB;q=0.8,en-US;q=0.7"
 }
 Files received: []
 Body received: {
-  "title": "Test Laporan Biasa",
-  "description": "Deskripsi laporan biasa panjang minimal sepuluh karakter",
-  "tanggal_kejadian": "2026-06-03",
-  "lokasi_kejadian": "Jalan Raya",
-  "instansi_tujuan": "3",
-  "category_id": "6"
-}
-
-
---- [2026-06-03T13:53:14.666Z] Incoming Request ---
-Headers: {
-  "host": "localhost:3000",
-  "connection": "keep-alive",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNDU4ODY1LCJleHAiOjE3ODA1NDUyNjV9.TI8cc4Q9Yc6La501ZZgczie5-BxvodqVsXnjZKE1Ts8",
-  "content-type": "multipart/form-data; boundary=----formdata-undici-014397465453",
-  "accept": "*/*",
-  "accept-language": "*",
-  "sec-fetch-mode": "cors",
-  "user-agent": "node",
-  "accept-encoding": "gzip, deflate",
-  "content-length": "687"
-}
-Files received: []
-Body received: {
-  "title": "Test Laporan Biasa",
-  "description": "Deskripsi laporan biasa panjang minimal sepuluh karakter",
-  "tanggal_kejadian": "212121",
-  "lokasi_kejadian": "Jalan Raya",
-  "instansi_tujuan": "3",
-  "category_id": "6"
-}
-
-
---- [2026-06-03T13:55:29.249Z] Incoming Request ---
-Headers: {
-  "host": "192.168.123.54:3000",
-  "connection": "keep-alive",
-  "content-length": "817",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryIcRJHno37VixcVcd",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNDU4ODY1LCJleHAiOjE3ODA1NDUyNjV9.TI8cc4Q9Yc6La501ZZgczie5-BxvodqVsXnjZKE1Ts8",
-  "accept": "*/*",
-  "origin": "http://localhost:8081",
-  "referer": "http://localhost:8081/",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-}
-Files received: []
-Body received: {
-  "title": "sagrgrgargrgragrsgsgrg",
-  "description": "rgadggraegaregregergg",
-  "tanggal_kejadian": "2026-06-03",
-  "lokasi_kejadian": "sfsasgsaggaegrgr",
-  "instansi_tujuan": "3",
-  "category_id": "6",
-  "files": "[object Object]"
-}
-
-
---- [2026-06-04T07:04:16.035Z] Incoming Request ---
-Headers: {
-  "host": "10.210.234.228:3000",
-  "connection": "keep-alive",
-  "content-length": "691",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-  "content-type": "multipart/form-data; boundary=----WebKitFormBoundarySgxzIzRUoO9vQbXb",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNTU2NjIwLCJleHAiOjE3ODA2NDMwMjB9._WJCxPajiAhKwMURh6ssNA-e0RGOg-Nmxz5YMlewtuc",
-  "accept": "*/*",
-  "origin": "http://localhost:8081",
-  "referer": "http://localhost:8081/",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-}
-Files received: []
-Body received: {
-  "title": "coba dulu",
-  "description": "coba dulucoba dulucoba dulu",
-  "tanggal_kejadian": "2022-06-03",
-  "lokasi_kejadian": "coba",
-  "instansi_tujuan": "5",
-  "category_id": "1"
-}
-
-
---- [2026-06-04T07:04:47.260Z] Incoming Request ---
-Headers: {
-  "host": "10.210.234.228:3000",
-  "connection": "keep-alive",
-  "content-length": "821",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryIO7uyM41ykBmY8nu",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNTU2NjIwLCJleHAiOjE3ODA2NDMwMjB9._WJCxPajiAhKwMURh6ssNA-e0RGOg-Nmxz5YMlewtuc",
-  "accept": "*/*",
-  "origin": "http://localhost:8081",
-  "referer": "http://localhost:8081/",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-}
-Files received: []
-Body received: {
-  "title": "coba dulu",
-  "description": "coba dulucoba dulucoba dulu",
-  "tanggal_kejadian": "2022-08-10",
-  "lokasi_kejadian": "coba dulucoba dulucoba dulu",
-  "instansi_tujuan": "3",
-  "category_id": "3",
-  "files": "[object Object]"
-}
-
-
---- [2026-06-04T07:07:40.628Z] Incoming Request ---
-Headers: {
-  "host": "10.210.234.228:3000",
-  "connection": "keep-alive",
-  "content-length": "776",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryEAPJ47wbqn1Sm0p9",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNTU2NjIwLCJleHAiOjE3ODA2NDMwMjB9._WJCxPajiAhKwMURh6ssNA-e0RGOg-Nmxz5YMlewtuc",
-  "accept": "*/*",
-  "origin": "http://localhost:8081",
-  "referer": "http://localhost:8081/",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-}
-Files received: []
-Body received: {
-  "title": "asdasd",
-  "description": "asdasd",
-  "tanggal_kejadian": "2002-02-22",
-  "lokasi_kejadian": "asdasd",
-  "instansi_tujuan": "2",
+  "title": "testing1",
+  "description": "testing di\r\n",
   "category_id": "4",
-  "files": "[object Object]"
+  "instansi_tujuan": "Dinas Pekerjaan Umum",
+  "existing_images": "[]"
 }
 
 
---- [2026-06-04T07:23:22.013Z] Incoming Request ---
+--- [2026-06-04T08:32:21.881Z] Incoming Request ---
 Headers: {
   "host": "10.210.234.228:3000",
   "connection": "keep-alive",
-  "content-length": "831",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-  "content-type": "multipart/form-data; boundary=----WebKitFormBoundarygfX5yYkM5NcDckl1",
+  "content-length": "134193",
+  "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryi4pgW0B0yDn8edPF",
   "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNTU2NjIwLCJleHAiOjE3ODA2NDMwMjB9._WJCxPajiAhKwMURh6ssNA-e0RGOg-Nmxz5YMlewtuc",
   "accept": "*/*",
   "origin": "http://localhost:8081",
   "referer": "http://localhost:8081/",
   "accept-encoding": "gzip, deflate",
-  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-}
-Files received: []
-Body received: {
-  "title": "rapi jelek",
-  "description": "rapi jelekrapi jelekrapi jelekrapi jelek",
-  "tanggal_kejadian": "2022-01-20",
-  "lokasi_kejadian": "cobabaocbaoboaboaboabda",
-  "instansi_tujuan": "5",
-  "category_id": "3",
-  "files": "[object Object]"
-}
-
-
---- [2026-06-04T07:27:03.274Z] Incoming Request ---
-Headers: {
-  "host": "10.210.234.228:3000",
-  "connection": "keep-alive",
-  "content-length": "866",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-  "content-type": "multipart/form-data",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNTU2NjIwLCJleHAiOjE3ODA2NDMwMjB9._WJCxPajiAhKwMURh6ssNA-e0RGOg-Nmxz5YMlewtuc",
-  "accept": "*/*",
-  "origin": "http://localhost:8081",
-  "referer": "http://localhost:8081/",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-}
-Upload Error: Multipart: Boundary not found
-
-
---- [2026-06-04T07:31:08.937Z] Incoming Request ---
-Headers: {
-  "host": "10.210.234.228:3000",
-  "connection": "keep-alive",
-  "content-length": "866",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryJfxhTrximAwBGa5c",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNTU2NjIwLCJleHAiOjE3ODA2NDMwMjB9._WJCxPajiAhKwMURh6ssNA-e0RGOg-Nmxz5YMlewtuc",
-  "accept": "*/*",
-  "origin": "http://localhost:8081",
-  "referer": "http://localhost:8081/",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
-}
-Files received: []
-Body received: {
-  "title": "sadasd",
-  "description": "asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd",
-  "tanggal_kejadian": "2002-02-12",
-  "lokasi_kejadian": "asdasd",
-  "instansi_tujuan": "5",
-  "category_id": "4",
-  "files": "[object Object]"
-}
-
-
---- [2026-06-04T07:33:20.655Z] Incoming Request ---
-Headers: {
-  "host": "10.210.234.228:3000",
-  "connection": "keep-alive",
-  "content-length": "125209",
-  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryw2ROacieI6sozGgt",
-  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIiwiZW1haWwiOiJzdWx0b25scHRwQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzgwNTU2NjIwLCJleHAiOjE3ODA2NDMwMjB9._WJCxPajiAhKwMURh6ssNA-e0RGOg-Nmxz5YMlewtuc",
-  "accept": "*/*",
-  "origin": "http://localhost:8081",
-  "referer": "http://localhost:8081/",
-  "accept-encoding": "gzip, deflate",
-  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+  "cache-control": "no-cache",
+  "pragma": "no-cache"
 }
 Files received: [
   {
     "fieldname": "files",
-    "originalname": "Social life.jpg",
+    "originalname": "IMG-20250603-WA0031.jpg",
     "encoding": "7bit",
     "mimetype": "image/jpeg",
     "destination": "uploads/",
-    "filename": "1780558400670-706643671.jpg",
-    "path": "uploads\\1780558400670-706643671.jpg",
-    "size": 124382
+    "filename": "1780561941897-144735350.jpg",
+    "path": "uploads\\1780561941897-144735350.jpg",
+    "size": 133304
   }
 ]
 Body received: {
-  "title": "asdasdasd",
-  "description": "asdasdasdasdasdasd",
-  "tanggal_kejadian": "2002-02-22",
-  "lokasi_kejadian": "asd",
+  "title": "testing mobile",
+  "description": "testing mobiletesting mobile",
+  "tanggal_kejadian": "2022-01-10",
+  "lokasi_kejadian": "testing mobiletesting mobiletesting mobile",
   "instansi_tujuan": "2",
   "category_id": "4"
+}
+
+
+--- [2026-06-04T08:37:36.336Z] Incoming Request ---
+Headers: {
+  "host": "localhost:3000",
+  "connection": "keep-alive",
+  "content-length": "712",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmlrIjoiMTk5OTk5MTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6ImNvYmFtb2JpbGUiLCJlbWFpbCI6ImNvYmFtb2JpbGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3ODA1NjA5MzYsImV4cCI6MTc4MDY0NzMzNn0.QsKlzYeTb0bx4pA-kEjwMC4lygQb2J8ZL-DUS33LJFU",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0",
+  "accept": "application/json, text/plain, */*",
+  "sec-ch-ua": "\"Chromium\";v=\"148\", \"Microsoft Edge\";v=\"148\", \"Not/A)Brand\";v=\"99\"",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryBRkopv371u0baUIY",
+  "sec-ch-ua-mobile": "?0",
+  "origin": "http://localhost:3001",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:3001/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "id,en;q=0.9,en-GB;q=0.8,en-US;q=0.7"
+}
+Files received: []
+Body received: {
+  "title": "addadadadadadad",
+  "description": "adqJDGVALJGVhf",
+  "tanggal_kejadian": "2026-07-02",
+  "lokasi_kejadian": "fFDSDSDSGDGDGDGSDSGSD",
+  "instansi_tujuan": "Dinas Sosial",
+  "category_id": "2"
 }
