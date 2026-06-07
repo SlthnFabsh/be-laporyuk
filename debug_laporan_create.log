@@ -40,3 +40,24 @@ Fields: {
   "category_id": "4"
 }
 Result: Success! Inserted ID: 57
+
+
+--- [2026-06-07T11:05:22.661Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "COBA AJA Test",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780827804,
+  "exp": 1780914204
+}
+Fields: {
+  "title": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "description": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "tanggal_kejadian": "2009-02-10",
+  "lokasi_kejadian": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+  "instansi_tujuan": "3",
+  "category_id": "6"
+}
+Result: Success! Inserted ID: 58
