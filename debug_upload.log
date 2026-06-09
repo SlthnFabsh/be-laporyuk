@@ -98,3 +98,290 @@ Body received: {
   "instansi_tujuan": "3",
   "category_id": "6"
 }
+
+
+--- [2026-06-07T17:29:07.024Z] Incoming Request ---
+Headers: {
+  "host": "localhost:3000",
+  "connection": "keep-alive",
+  "content-length": "225471",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkNPQkEgQUpBIFRlc3QiLCJlbWFpbCI6InN1bHRvbmxwdHBAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3ODA4NTMwMzQsImV4cCI6MTc4MDkzOTQzNH0.GsV5S-lP1P5Yx31NxyhruCMZ84yubldMMSQzA5FRcJk",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+  "accept": "application/json, text/plain, */*",
+  "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryTEdwulTZwZi4XxE0",
+  "sec-ch-ua-mobile": "?0",
+  "origin": "http://localhost:3001",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:3001/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+}
+Files received: [
+  {
+    "fieldname": "files",
+    "originalname": "download (4).jpg",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "uploads/",
+    "filename": "1780853347052-986512646.jpg",
+    "path": "uploads\\1780853347052-986512646.jpg",
+    "size": 224579
+  }
+]
+Body received: {
+  "title": "Jalan Rusak nih",
+  "description": "Jalan Rusak nih di daerah saya, tolong benerin",
+  "tanggal_kejadian": "2026-06-08",
+  "lokasi_kejadian": "Jl. depok Raya",
+  "instansi_tujuan": "Dinas Pekerjaan Umum",
+  "category_id": "1"
+}
+
+
+--- [2026-06-09T01:48:46.590Z] Incoming Request ---
+Headers: {
+  "host": "localhost:3000",
+  "connection": "keep-alive",
+  "content-length": "1461779",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkFrdW4gVXNlciIsImVtYWlsIjoic3VsdG9ubHB0cEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc4MDk2OTYxMiwiZXhwIjoxNzgxMDU2MDEyfQ.ai4sJcgFwMSHw9KvTNzrLQDgpRtfzUZ2wq7Jrsoifvc",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+  "accept": "application/json, text/plain, */*",
+  "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryYosIu086AN3wVRuQ",
+  "sec-ch-ua-mobile": "?0",
+  "origin": "http://localhost:3001",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:3001/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+}
+Files received: [
+  {
+    "fieldname": "files",
+    "originalname": "IMG_20250526_090529_446.jpg",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "uploads/",
+    "filename": "1780969726648-30992876.jpg",
+    "path": "uploads\\1780969726648-30992876.jpg",
+    "size": 1387725
+  },
+  {
+    "fieldname": "files",
+    "originalname": "A historical monument in Jakarta, Monas, Indonesia   Photo by_ IG @purpules.jpg",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "uploads/",
+    "filename": "1780969726712-114396984.jpg",
+    "path": "uploads\\1780969726712-114396984.jpg",
+    "size": 72972
+  }
+]
+Body received: {
+  "title": "taruna bhakti rubuh",
+  "description": "gimana nih tb rubuh ",
+  "tanggal_kejadian": "2026-06-03",
+  "lokasi_kejadian": "Pekapuran",
+  "instansi_tujuan": "Dinas Pendidikan",
+  "category_id": "4"
+}
+
+
+--- [2026-06-09T03:20:02.086Z] Incoming Request ---
+Headers: {
+  "host": "10.2.8.208:3000",
+  "connection": "keep-alive",
+  "content-length": "5310439",
+  "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundarymFq70ImZqgfFG9jY",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkFrdW4gVXNlciIsImVtYWlsIjoic3VsdG9ubHB0cEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc4MDk3NTA4NywiZXhwIjoxNzgxMDYxNDg3fQ.PWMz7Dd6bT63n2wmtF3Y-gZ-mpNVygD_LsG5ank-r6o",
+  "accept": "*/*",
+  "origin": "http://localhost:8081",
+  "referer": "http://localhost:8081/",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+  "cache-control": "no-cache",
+  "pragma": "no-cache"
+}
+Multer Error: File too large
+
+
+--- [2026-06-09T03:20:27.057Z] Incoming Request ---
+Headers: {
+  "host": "10.2.8.208:3000",
+  "connection": "keep-alive",
+  "content-length": "110756",
+  "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundary6CRd0QF7EAua3S3a",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkFrdW4gVXNlciIsImVtYWlsIjoic3VsdG9ubHB0cEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc4MDk3NTA4NywiZXhwIjoxNzgxMDYxNDg3fQ.PWMz7Dd6bT63n2wmtF3Y-gZ-mpNVygD_LsG5ank-r6o",
+  "accept": "*/*",
+  "origin": "http://localhost:8081",
+  "referer": "http://localhost:8081/",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+  "cache-control": "no-cache",
+  "pragma": "no-cache"
+}
+Files received: [
+  {
+    "fieldname": "files",
+    "originalname": "Screenshot_2026-05-12_213505-removebg-preview.png",
+    "encoding": "7bit",
+    "mimetype": "image/png",
+    "destination": "uploads/",
+    "filename": "1780975227061-164783558.png",
+    "path": "uploads\\1780975227061-164783558.png",
+    "size": 109887
+  }
+]
+Body received: {
+  "title": "testing laporan",
+  "description": "testing laporan",
+  "tanggal_kejadian": "2021-10-10",
+  "lokasi_kejadian": "pekapuran",
+  "instansi_tujuan": "5",
+  "category_id": "4"
+}
+
+
+--- [2026-06-09T04:16:00.229Z] Incoming Request ---
+Headers: {
+  "host": "localhost:3000",
+  "connection": "keep-alive",
+  "content-length": "1356484",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkFrdW4gVXNlciIsImVtYWlsIjoic3VsdG9ubHB0cEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc4MDk3ODQ4OSwiZXhwIjoxNzgxMDY0ODg5fQ.7M_3D2Hdoa40E5qI2oiKrCx0VyfDowdv7SjAKi_0bPE",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+  "accept": "application/json, text/plain, */*",
+  "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryjvYSmkzYMyBpWcFT",
+  "sec-ch-ua-mobile": "?0",
+  "origin": "http://localhost:3001",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:3001/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+}
+Files received: [
+  {
+    "fieldname": "files",
+    "originalname": "Gemini_Generated_Image_t3rnivt3rnivt3rn-removebg-preview.png",
+    "encoding": "7bit",
+    "mimetype": "image/png",
+    "destination": "uploads/",
+    "filename": "1780978560267-752303013.png",
+    "path": "uploads\\1780978560267-752303013.png",
+    "size": 56940
+  },
+  {
+    "fieldname": "files",
+    "originalname": "Gemini_Generated_Image_xn01dwxn01dwxn01.png",
+    "encoding": "7bit",
+    "mimetype": "image/png",
+    "destination": "uploads/",
+    "filename": "1780978560269-790895039.png",
+    "path": "uploads\\1780978560269-790895039.png",
+    "size": 1298476
+  }
+]
+Body received: {
+  "title": "testing laporan",
+  "description": "testing laporan",
+  "tanggal_kejadian": "2026-06-09",
+  "lokasi_kejadian": "Pekapuran",
+  "instansi_tujuan": "Dinas Pendidikan",
+  "category_id": "7"
+}
+
+
+--- [2026-06-09T14:01:18.778Z] Incoming Request ---
+Headers: {
+  "host": "localhost:3000",
+  "connection": "keep-alive",
+  "content-length": "127820",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkFrdW4gVXNlciIsImVtYWlsIjoic3VsdG9ubHB0cEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc4MTAxMjA4MiwiZXhwIjoxNzgxMDk4NDgyfQ.yR6hody03xhRryn6xPPC7_ZsnW3DW0e-i1E5Lo02W5c",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+  "accept": "application/json, text/plain, */*",
+  "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryE3n07ir3WQAZtozu",
+  "sec-ch-ua-mobile": "?0",
+  "origin": "http://localhost:3001",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:3001/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+}
+Files received: [
+  {
+    "fieldname": "files",
+    "originalname": "erd_LaporYuk!.png",
+    "encoding": "7bit",
+    "mimetype": "image/png",
+    "destination": "uploads/",
+    "filename": "1781013678829-161256175.png",
+    "path": "uploads\\1781013678829-161256175.png",
+    "size": 126837
+  }
+]
+Body received: {
+  "title": "testing maps",
+  "description": "testing maps",
+  "tanggal_kejadian": "2026-06-09",
+  "lokasi_kejadian": "{\"address\":\"Kelurahan Sukamaju Baru, Tapos, Depok, Jawa Barat, 16415, Indonesia\",\"latitude\":\"-6.401119639528775\",\"longitude\":\"106.87196722372744\"}",
+  "instansi_tujuan": "Dinas Pendidikan",
+  "category_id": "3"
+}
+
+
+--- [2026-06-09T14:25:28.017Z] Incoming Request ---
+Headers: {
+  "host": "localhost:3000",
+  "connection": "keep-alive",
+  "content-length": "74023",
+  "sec-ch-ua-platform": "\"Windows\"",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmlrIjoiMTExMTExMTExMTExMTExMSIsIm5hbWFfbGVuZ2thcCI6IkFrdW4gVXNlciIsImVtYWlsIjoic3VsdG9ubHB0cEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc4MTAxNTAwNywiZXhwIjoxNzgxMTAxNDA3fQ.4TUCJkU8toXYuncIsepcwiHCOMbqGonOPU721So6DRo",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+  "accept": "application/json, text/plain, */*",
+  "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+  "content-type": "multipart/form-data; boundary=----WebKitFormBoundarydJ3YKOSPfBdOhmhd",
+  "sec-ch-ua-mobile": "?0",
+  "origin": "http://localhost:3001",
+  "sec-fetch-site": "same-site",
+  "sec-fetch-mode": "cors",
+  "sec-fetch-dest": "empty",
+  "referer": "http://localhost:3001/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"
+}
+Files received: [
+  {
+    "fieldname": "files",
+    "originalname": "A historical monument in Jakarta, Monas, Indonesia   Photo by_ IG @purpules.jpg",
+    "encoding": "7bit",
+    "mimetype": "image/jpeg",
+    "destination": "uploads/",
+    "filename": "1781015128031-319057676.jpg",
+    "path": "uploads\\1781015128031-319057676.jpg",
+    "size": 72972
+  }
+]
+Body received: {
+  "title": "cobain laporan nya",
+  "description": "cobain laporan nya",
+  "tanggal_kejadian": "2026-06-09",
+  "lokasi_kejadian": "{\"address\":\"Kelurahan Sukamaju Baru, Tapos, Depok, Jawa Barat, 16415, Indonesia\",\"latitude\":\"-6.401119639528775\",\"longitude\":\"106.87196722372744\"}",
+  "instansi_tujuan": "dinas apa",
+  "category_id": "4"
+}

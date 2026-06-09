@@ -61,3 +61,129 @@ Fields: {
   "category_id": "6"
 }
 Result: Success! Inserted ID: 58
+
+
+--- [2026-06-07T17:29:07.074Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "COBA AJA Test",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780853034,
+  "exp": 1780939434
+}
+Fields: {
+  "title": "Jalan Rusak nih",
+  "description": "Jalan Rusak nih di daerah saya, tolong benerin",
+  "tanggal_kejadian": "2026-06-08",
+  "lokasi_kejadian": "Jl. depok Raya",
+  "instansi_tujuan": "Dinas Pekerjaan Umum",
+  "category_id": "1"
+}
+Result: Success! Inserted ID: 59
+
+
+--- [2026-06-09T01:48:46.749Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "Akun User",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780969612,
+  "exp": 1781056012
+}
+Fields: {
+  "title": "taruna bhakti rubuh",
+  "description": "gimana nih tb rubuh ",
+  "tanggal_kejadian": "2026-06-03",
+  "lokasi_kejadian": "Pekapuran",
+  "instansi_tujuan": "Dinas Pendidikan",
+  "category_id": "4"
+}
+Result: Success! Inserted ID: 60
+
+
+--- [2026-06-09T03:20:27.076Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "Akun User",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780975087,
+  "exp": 1781061487
+}
+Fields: {
+  "title": "testing laporan",
+  "description": "testing laporan",
+  "tanggal_kejadian": "2021-10-10",
+  "lokasi_kejadian": "pekapuran",
+  "instansi_tujuan": "5",
+  "category_id": "4"
+}
+Result: Success! Inserted ID: 61
+
+
+--- [2026-06-09T04:16:00.317Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "Akun User",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1780978489,
+  "exp": 1781064889
+}
+Fields: {
+  "title": "testing laporan",
+  "description": "testing laporan",
+  "tanggal_kejadian": "2026-06-09",
+  "lokasi_kejadian": "Pekapuran",
+  "instansi_tujuan": "Dinas Pendidikan",
+  "category_id": "7"
+}
+Result: Success! Inserted ID: 62
+
+
+--- [2026-06-09T14:01:18.856Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "Akun User",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1781012082,
+  "exp": 1781098482
+}
+Fields: {
+  "title": "testing maps",
+  "description": "testing maps",
+  "tanggal_kejadian": "2026-06-09",
+  "lokasi_kejadian": "{\"address\":\"Kelurahan Sukamaju Baru, Tapos, Depok, Jawa Barat, 16415, Indonesia\",\"latitude\":\"-6.401119639528775\",\"longitude\":\"106.87196722372744\"}",
+  "instansi_tujuan": "Dinas Pendidikan",
+  "category_id": "3"
+}
+Result: Success! Inserted ID: 63
+
+
+--- [2026-06-09T14:25:28.044Z] createLaporan Executing ---
+User: {
+  "id": 1,
+  "nik": "1111111111111111",
+  "nama_lengkap": "Akun User",
+  "email": "sultonlptp@gmail.com",
+  "role": "user",
+  "iat": 1781015007,
+  "exp": 1781101407
+}
+Fields: {
+  "title": "cobain laporan nya",
+  "description": "cobain laporan nya",
+  "tanggal_kejadian": "2026-06-09",
+  "lokasi_kejadian": "{\"address\":\"Kelurahan Sukamaju Baru, Tapos, Depok, Jawa Barat, 16415, Indonesia\",\"latitude\":\"-6.401119639528775\",\"longitude\":\"106.87196722372744\"}",
+  "instansi_tujuan": "dinas apa",
+  "category_id": "4"
+}
+Result: Success! Inserted ID: 64
